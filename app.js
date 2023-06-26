@@ -2,7 +2,7 @@ const express = require('express');
 const expressWs = require('express-ws');
 
 const app = express();
-const wsInstance = expressWs(app);
+expressWs(app);
 
 app.ws('/', (ws, req) => {
   // Handle WebSocket connections
@@ -21,6 +21,7 @@ app.ws('/', (ws, req) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log('Server started on port 3001');
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
