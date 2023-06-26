@@ -12,7 +12,7 @@ app.ws('/', (ws, req) => {
     console.log('Received message:', message);
 
     // Send a response back to the client
-    ws.send('Message received!');
+    ws.send(message);
   });
 
   ws.on('close', () => {
