@@ -9,7 +9,7 @@ app.ws('/', (ws, req) => {
 
   ws.on('message', (message) => {
     // Process incoming WebSocket messages
-    console.log('Received message:', message);
+    console.log('Received message:', message );
 
     // Send a response back to the client
     ws.send(message);
